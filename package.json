@@ -1,6 +1,14 @@
 {
   "name": "md-links",
   "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "Marti Muñoz",
+  "license": "ISC",
   "engines": {
     "node": ">=16.x"
   },
@@ -8,5 +16,20 @@
     "createdAt": "2023-06-20T14:05:58.211Z",
     "version": "6.3.0",
     "commit": "e129ade681adff8cbb19f82e63f688fef2f08f32"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "eslint": "^8.45.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-prettier": "^5.0.0",
+    "jest": "^29.6.1"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.1.0"
   }
 }
