@@ -16,6 +16,8 @@
     "no-console": "off"
   },
 
+  "plugins": ["import"],
+
   "overrides": [
     {
       "files": ["**/*.spec.js", "**/*.spec.jsx"]

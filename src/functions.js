@@ -25,7 +25,7 @@ export const readMdFile = (route) => {
   const matches = Array.from(file.matchAll(regex));
   const links = matches.map((match) => ({
     text: match[1],
-    url: match[2],
+    href: match[2],
     file: path.resolve(route),
   }));
 
@@ -52,6 +52,7 @@ export const mdLinksRecursive = (dir) => {
   return mdFiles;
 };
 
+// Handles both successful requests and errors with axios, updating the link object accordingly
 export const validateRes = (link) => new Promise ((resolve) => {
     const validatedRes = { ...link };
     axios.get(link.href)
@@ -69,7 +70,8 @@ export const validateRes = (link) => new Promise ((resolve) => {
     });
 });
 
-
+// Takes an array of link objects, calculates statistics about the links, 
+// and returns an object containing the computed values
 export const computeRes = (links) => {
     const uniqueLinksSet = new Set(links.map((link) => link.href));
     const totalLinks = links.length;

@@ -73,6 +73,7 @@ const mdLinks = (pathUser, { validate = false, stats = false } = {}) => new Prom
 });
 
 export default mdLinks;
+
 /* -----------------------TERCERA PRUEBA-------------------------
 //Inicializando ruta
 const routeUser = process.argv[2];
