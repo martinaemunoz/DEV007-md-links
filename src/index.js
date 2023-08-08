@@ -57,12 +57,6 @@ const mdLinks = (pathUser, { validate = false, stats = false } = {}) => new Prom
     computeLinks(links, { validate, stats })
       .then(resolve)
       .catch(reject);
-
-    /* if (links.length === 0) {
-      resolve('Empty .md file found');
-    } else {
-      resolve(links);
-    } */
   } else {
     reject(
       new Error(

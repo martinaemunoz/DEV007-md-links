@@ -142,7 +142,7 @@ describe('computeRes', () => {
 });
 
 describe('readMdFile', () => {
-  it('should handle no links in the Markdown file', () => {
+  it('Handles no links in the Markdown file', () => {
     const filePath = path.join(__dirname, 'empty.md');
     const content = 'This is a test file without links.';
     require('fs').writeFileSync(filePath, content);

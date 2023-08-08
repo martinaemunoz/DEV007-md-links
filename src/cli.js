@@ -39,9 +39,6 @@ mdLinks(path, { validate: validateOption, stats: statsOption })
       console.log(chalk.blue(`Unique links: ${uniqueLinks}`));
       console.log(chalk.blue(`Broken links: ${brokenLinks}`));
       console.log(chalk.green('--------------------------'));
-      /* console.log(chalk.green.bold('.md file(s) found:\n'));
-      console.log(chalk.blue.bold('Links Found:\n'));
-      console.log(res); */
     } else if (validateOption) {
       console.log(chalk.cyan.bold('\nValidation:\n'));
       res.forEach((link) => {
@@ -63,7 +60,7 @@ mdLinks(path, { validate: validateOption, stats: statsOption })
       console.log(chalk.blue(`Unique links: ${uniqueLinks}`));
       console.log(chalk.green('--------------------------'));
     } else {
-      console.log('Links found:\n');
+      console.log(chalk.cyan.bold('Retrieved links without validation/stats:\n'));
       console.log(res);
     }
   })
