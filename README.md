@@ -64,7 +64,7 @@ The 'path' parameter represents the location of the file or directory, and it ca
 ### 2) As a CLI (Command Line Interface)
 
 ## 5. Output showcase
-#### Retrieves links without options: <br><br><img src="/img/no-options.png" style= width:80%>
+#### Retrieves links without options: <br><br><img src="https://github.com/martinaemunoz/DEV007-md-links/blob/develop/img/no-options.png" style= width:80%>
 
 #### Validates links: <br><br><img src="/img/validate.png" style= width:80%>
 
