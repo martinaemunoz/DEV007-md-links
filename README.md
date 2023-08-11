@@ -1,6 +1,6 @@
 # Markdown Links
 
-## Índice
+## Index
 
 * [1. About the Library](#1-about-the-library)
 * [2. Summary](#2-summary)
