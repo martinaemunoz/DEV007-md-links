@@ -64,7 +64,7 @@ mdLinks(path, { validate: validateOption, stats: statsOption })
         console.log(chalk.green('-+-°-o-o-0-0-0-0-0-0-0-0-0-0-0-0-o-o-°-+-'));
       });
     } else if (statsOption) {
-      // Extracts validation properties.
+      // Extracts stats properties.
       const { totalLinks, uniqueLinks } = res;
       console.log(chalk.cyan.bold('\nStats:\n'));
       console.log(chalk.blue(`Total links: ${totalLinks}`));
