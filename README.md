@@ -1,5 +1,7 @@
 # Markdown Links
 
+<br><br><img src="/img/banner-md.png" style= width:80%>
+
 ## Index
 
 * [1. About the Library](#1-about-the-library)
@@ -32,7 +34,7 @@ Both the library and its accompanying CLI rely on external dependencies, includi
 
 Flowchart that was used for project development.
 
-<br><br><img src="/img/md-links.drawio.png" style= width:80%>
+<br><br><img src="https://raw.githubusercontent.com/martinaemunoz/DEV007-md-links/develop/img/md-links.drawio.png" style= width:80%>
 
 ## 4. User guide
 
@@ -63,22 +65,34 @@ The 'path' parameter represents the location of the file or directory, and it ca
 
 ### 2) As a CLI (Command Line Interface)
 
+#### Installation
+
+To use as a command line interface, open your terminal and run the following command:
+
+    npm i martimunoz-mdl
+
+Once installed, the command-line interface (CLI) is executed within the terminal using the following command:
+
+    npx martimunoz-mdl <path> [options]
+
+The path represents the file or directory's route (which can be either an absolute or relative path), and options refer to the extra actions you wish to execute. While options are not obligatory, the application remains functional with only a path supplied. Potential options include: --validate, --stats, or a combination of both.
+
 ## 5. Output showcase
 #### Retrieves links without options: <br><br><img src="https://github.com/martinaemunoz/DEV007-md-links/blob/develop/img/no-options.png" style= width:80%>
 
-#### Validates links: <br><br><img src="/img/validate.png" style= width:80%>
+#### Validates links: <br><br><img src="https://raw.githubusercontent.com/martinaemunoz/DEV007-md-links/develop/img/validate.png" style= width:80%>
 
-#### Shows stats: <br><br><img src="/img/stats.png" style= width:80%>
+#### Shows stats: <br><br><img src="https://raw.githubusercontent.com/martinaemunoz/DEV007-md-links/develop/img/stats.png" style= width:80%>
 
-#### Shows validation and stats: <br><br><img src="/img/validate-stats.png" style= width:80%>
+#### Shows validation and stats: <br><br><img src="https://raw.githubusercontent.com/martinaemunoz/DEV007-md-links/develop/img/validate-stats.png" style= width:80%>
 
-#### Shows error if path is invalid: <br><br><img src="/img/invalid-path.png" style= width:80%>
+#### Shows error if path is invalid: <br><br><img src="https://raw.githubusercontent.com/martinaemunoz/DEV007-md-links/develop/img/invalid-path.png" style= width:80%>
 
-#### Shows error if no links were found: <br><br><img src="/img/no-links-found.png" style= width:80%>
+#### Shows error if no links were found: <br><br><img src="https://raw.githubusercontent.com/martinaemunoz/DEV007-md-links/develop/img/no-links-found.png" style= width:80%>
 
 ## 6. Unit testing
 Tests cover 89.36% of statements, 83.33% of branches, 81.25% of functions and 92.1% of lines. Jest was employed for conducting the tests. For more information on the results you can check the image below:
-<br><br><img src="/img/unit-testing.png" style= width:80%>
+<br><br><img src="https://raw.githubusercontent.com/martinaemunoz/DEV007-md-links/develop/img/unit-testing.png" style= width:80%>
 
 ## 7. Checklist
 

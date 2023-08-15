@@ -64,6 +64,7 @@ describe('extName', () => {
 });
 
 describe('mdLinksRecursive', () => {
+  // Mocks the behavior of readdirSync to return specific filenames
   jest.spyOn(fs, 'readdirSync').mockImplementation((dir) => {
     if (dir === 'tempDir') {
       return ['file1.md', 'file2.js', 'subdir'];
@@ -74,7 +75,10 @@ describe('mdLinksRecursive', () => {
     return [];
   });
 
+  // Mocks the behavior of statSync to return different boolean values
+  // based on the filename (whether it's an .md file or a directory)
   jest.spyOn(fs, 'statSync').mockImplementation((file) => {
+    // Returns the last portion of the path
     const baseName = path.basename(file);
     if (baseName === 'file1.md' || baseName === 'file3.md') {
       return { isFile: () => true };
@@ -84,18 +88,21 @@ describe('mdLinksRecursive', () => {
 
   // eslint-disable-next-line max-len
   it('Returns an array with all .md files in the directory and its subdirectories', () => {
+    // Checks whether the mdLinksRecursive function correctly finds .md files in a directory and its subdirectories.
     const result = mdLinksRecursive('tempDir');
     expect(result).toEqual([
       'tempDir\\file1.md',
       'tempDir\\subdir\\file3.md',
     ]);
   });
+    // Checks whether the mdLinksRecursive function handles the case of an empty directory correctly.
   it('Returns an empty array for an empty directory', () => {
     const result = mdLinksRecursive('empty');
     expect(result).toEqual([]);
   });
 });
 
+// Mock for the axios library
 jest.mock('axios');
 
 describe('validateRes', () => {
@@ -107,6 +114,7 @@ describe('validateRes', () => {
 
     const result = await validateRes(link);
 
+    //Expects an object that combines the original link properties with the status and statusText from the mock response.
     expect(result).toEqual({ ...link, status: response.status, statusText: response.statusText });
   });
 });
